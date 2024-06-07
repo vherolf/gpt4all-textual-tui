@@ -11,11 +11,11 @@ class GPTConsole(App):
     BINDINGS = [Binding(key="q", action="quit_gpt_console", description="Quit App"),
                 Binding(key="c", action="clear_gpt_console", description="Clear Console"),]
     CSS_PATH = "console-tui.tcss"
-    
+
     def compose(self) -> ComposeResult:
         yield Header(name=self.TITLE, show_clock=False)
         yield Input(placeholder=f"Send a message")
-        yield RichLog()
+        yield RichLog(highlight=True, markup=True)
         yield Footer()
 
     def on_mount(self):
@@ -27,7 +27,8 @@ class GPTConsole(App):
 
     async def ask_gpt(self, message):
         # input gpt4all here
-        self.query_one(RichLog).write(f"{message}")
+        self.query_one(RichLog).write(f"[bold magenta] {message}")
+        self.query_one(RichLog).write(f"[bold aliceblue] {message}")
     
     def action_clear_gpt_console(self) -> None:
         self.query_one(RichLog).clear()
