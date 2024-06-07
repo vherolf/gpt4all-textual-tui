@@ -6,7 +6,7 @@ from textual.binding import Binding
 
 
 class GPTConsole(App):
-    """a basic mqtt console example"""
+    """a basic GPT console example"""
     TITLE = "GPT Console"
     BINDINGS = [Binding(key="q", action="quit_gpt_console", description="Quit App"),
                 Binding(key="c", action="clear_gpt_console", description="Clear Console"),]
