@@ -1,3 +1,5 @@
 # gpt4all-textual-tui
 
-pip install gpt4all textualize
+```
+pip install textual-dev gpt4all
+```
