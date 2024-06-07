@@ -1,0 +1,35 @@
+Input.-valid {
+    border: tall #ED3F1C ;
+}
+
+Input.-valid:focus {
+    border: tall #ED8008;
+    /* color: #ED8008; */
+}
+
+Input {
+    width: 50%;
+}
+
+Label {
+    width: 50%;
+}
+
+#input-horizontal {
+    layout: horizontal;
+    height: auto;
+}
+
+#label-horizontal {
+    layout: horizontal;
+    height: auto;
+}
+#filter-horizontal {
+    layout: horizontal;
+    height: auto;
+}
+SelectionList {
+    height:5fr;
+    border: solid $accent;
+    width: 1fr;
+}

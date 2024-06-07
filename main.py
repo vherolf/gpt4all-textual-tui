@@ -10,7 +10,8 @@ class GPTConsole(App):
     TITLE = "GPT Console"
     BINDINGS = [Binding(key="q", action="quit_gpt_console", description="Quit App"),
                 Binding(key="c", action="clear_gpt_console", description="Clear Console"),]
-
+    CSS_PATH = "console-tui.tcss"
+    
     def compose(self) -> ComposeResult:
         yield Header(name=self.TITLE, show_clock=False)
         yield Input(placeholder=f"Send a message")
